@@ -2,6 +2,10 @@ name: Create Tag
 
 on:
   workflow_call:
+    secrets:
+      PERSONAL_ACCESS_TOKEN_FOR_PUSH_TAG:
+        required: true
+
 
 jobs:
   build:
@@ -11,4 +15,6 @@ jobs:
 
     - uses: butlerlogic/action-autotag@1.1.2
       env:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        GITHUB_TOKEN: "${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_PUSH_TAG }}"
+      with:
+        tag_prefix: "v"

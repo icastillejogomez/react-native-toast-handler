@@ -24,4 +24,5 @@ jobs:
     name: Tag
     needs: test
     uses: ./.github/workflows/tag.yml
-    secrets: inherit
+    secrets:
+      PERSONAL_ACCESS_TOKEN_FOR_PUSH_TAG: ${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_PUSH_TAG }}

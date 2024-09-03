@@ -17,7 +17,7 @@ jobs:
         run: |
           version_tag=${{ env.VERSION_REF }}
           echo "version_tag: $version_tag"
-          version=$(echo "$version_tag" | sed 's/refs\/tags\/v//')
+          version=$(echo "$version_tag" | sed 's/refs\/tags\/v//a')
           echo "version: $version"
           echo "version=$version" >> $GITHUB_OUTPUT
 

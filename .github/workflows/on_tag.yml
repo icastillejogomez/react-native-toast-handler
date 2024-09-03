@@ -17,7 +17,8 @@ jobs:
         run: |
           version_tag=${{ github.ref_name }}
           echo "version_tag: $version_tag"
-          version=$(echo "$version_tag" | sed 's/refs\/tags\/v//a')
+          # First, try to remove the "refs/tags/" prefix, after that remove the "v" prefix
+          version=$(echo "$version_tag" | sed -E 's|^refs/tags/||; s|^v||')
           echo "version: $version"
           echo "version=$version" >> $GITHUB_OUTPUT
 

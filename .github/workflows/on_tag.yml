@@ -15,7 +15,7 @@ jobs:
       - name: Parse version
         id: parser
         run: |
-          version_tag=${{ env.GITHUB_REF }}
+          version_tag=${{ github.ref_name }}
           echo "version_tag: $version_tag"
           version=$(echo "$version_tag" | sed 's/refs\/tags\/v//a')
           echo "version: $version"

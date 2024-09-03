@@ -24,3 +24,4 @@ jobs:
     name: Tag
     needs: test
     uses: ./.github/workflows/tag.yml
+    secrets: inherit

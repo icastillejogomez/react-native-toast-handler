@@ -2,27 +2,23 @@ name: Publish library
 
 on:
   workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
+    secrets:
+      NPM_TOKEN:
+        required: true
 
 jobs:
-  semver:
-    name: Version parser
+  publish_to_npm:
+    name: Publish to NPM
     runs-on: ubuntu-22.04
-    outputs:
-      version: ${{ steps.parser.outputs.version }}
     steps:
-      - name: Parse version
-        id: parser
-        run: |
-          version_tag=${{ env.VERSION_REF }}
-          echo "version_tag: $version_tag"
-          version=$(echo "$version_tag" | sed 's/refs\/tags\/v//')
-          echo "version: $version"
-          echo "version=$version" >> $GITHUB_OUTPUT
-
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          ref: ${{ inputs.version }}
+          ref: "v${{ inputs.version }}"
 
       - name: Publish
         uses: JS-DevTools/npm-publish@v1

@@ -5,6 +5,27 @@ on:
     types: [published]
 
 jobs:
+  semver:
+    name: Version parser
+    runs-on: ubuntu-22.04
+    outputs:
+      version: ${{ steps.parser.outputs.version }}
+    steps:
+      - name: Parse version
+        id: parser
+        run: |
+          version_tag=${{ github.ref_name }}
+          echo "version_tag: $version_tag"
+          # First, try to remove the "refs/tags/" prefix, after that remove the "v" prefix
+          version=$(echo "$version_tag" | sed -E 's|^refs/tags/||; s|^v||')
+          echo "version: $version"
+          echo "version=$version" >> $GITHUB_OUTPUT
+
   publish:
     name: Publish
+    needs: semver
     uses: ./.github/workflows/publish.yml
+    with:
+      version: ${{ needs.semver.outputs.version }}
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

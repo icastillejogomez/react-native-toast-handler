@@ -10,7 +10,9 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "echo 'Running tests...'"
+    "test": "echo 'Running tests...'",
+    "lint": "echo 'Linting...'",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",

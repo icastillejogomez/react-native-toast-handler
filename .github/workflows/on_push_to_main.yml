@@ -6,13 +6,13 @@ on:
       - main
 
 jobs:
-  # dependencies:
-  #   name: Install dependencies
-  #   uses: ./.github/workflows/install_dependencies.yml
+  dependencies:
+    name: Install dependencies
+    uses: ./.github/workflows/install_dependencies.yml
 
   qa:
     name: Quality assurance
-    # needs: dependencies
+    needs: dependencies
     uses: ./.github/workflows/qa.yml
 
   test:

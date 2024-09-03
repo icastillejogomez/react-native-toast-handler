@@ -1,0 +1,29 @@
+name: On tag
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  semver:
+    name: Version parser
+    runs-on: ubuntu-22.04
+    outputs:
+      version: ${{ steps.parser.outputs.version }}
+    steps:
+      - name: Parse version
+        id: parser
+        run: |
+          version_tag=${{ env.VERSION_REF }}
+          echo "version_tag: $version_tag"
+          version=$(echo "$version_tag" | sed 's/refs\/tags\/v//')
+          echo "version: $version"
+          echo "version=$version" >> $GITHUB_OUTPUT
+
+  release:
+    name: Release
+    needs: semver
+    uses: ./.github/workflows/release.yml
+    with:
+      version: ${{ needs.semver.outputs.version }}

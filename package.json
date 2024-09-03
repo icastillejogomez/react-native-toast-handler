@@ -9,7 +9,8 @@
     "lib"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "echo 'Running tests...'"
   },
   "repository": {
     "type": "git",

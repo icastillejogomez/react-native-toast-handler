@@ -1,0 +1,10 @@
+name: On release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    name: Publish
+    uses: ./.github/workflows/publish.yml

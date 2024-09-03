@@ -6,9 +6,10 @@ on:
       version:
         required: true
         type: string
-    prerelease:
-      type: boolean
-      default: false
+      prerelease:
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   job:

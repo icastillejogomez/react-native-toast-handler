@@ -17,8 +17,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-          with:
-            ref: ${{ inputs.version }}
+        with:
+          ref: ${{ inputs.version }}
 
       - name: Create Release
         id: create_release

@@ -27,6 +27,7 @@ jobs:
 
   publish_to_npm:
     name: Publish to NPM
+    needs: test
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code

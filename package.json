@@ -1,29 +1,13 @@
 {
-  "version": "0.1.2",
-  "name": "react-native-toast-handler",
-  "description": "",
   "author": "Ignacio F. Castillejo Gómez <i.castillejogomez@gmail.com>",
-  "license": "MIT",
-  "main": "dist/main.js",
-  "types": "dist/main.d.ts",
-  "private": false,
-  "homepage": "https://github.com/icastillejogomez/react-native-toast-handler#readme",
   "bugs": {
     "url": "https://github.com/icastillejogomez/react-native-toast-handler/issues"
   },
-  "scripts": {
-    "build": "tsc",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
-    "test": "echo 'Running tests...'",
-    "typecheck": "tsc --noEmit"
-  },
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
-  },
+  "description": "",
   "devDependencies": {
     "@react-native-community/eslint-config": "3.2.0",
     "@react-native/eslint-config": "0.75.2",
+    "@types/react": "18.3.5",
     "@typescript-eslint/eslint-plugin": "8.4.0",
     "@typescript-eslint/parser": "8.4.0",
     "eslint": "8.57.0",
@@ -39,14 +23,33 @@
   "files": [
     "dist"
   ],
+  "homepage": "https://github.com/icastillejogomez/react-native-toast-handler#readme",
   "keywords": [
     "react-native",
     "toast",
     "toast-handler",
     "custom-toast"
   ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "react-native-toast-handler",
+  "peerDependencies": {
+    "react-native-gesture-handler": "*",
+    "react-native-reanimated": "*",
+    "react-native": "*",
+    "react": "*"
+  },
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/icastillejogomez/react-native-toast-handler.git"
-  }
+  },
+  "scripts": {
+    "build": "rm -fr dist; tsc",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "test": "echo 'Running tests...'",
+    "typecheck": "tsc --noEmit"
+  },
+  "types": "dist/index.d.ts",
+  "version": "0.1.2"
 }

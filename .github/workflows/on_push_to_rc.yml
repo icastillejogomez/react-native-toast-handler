@@ -3,7 +3,7 @@ name: On push to RC
 on:
   push:
     branches:
-      - main
+      - rc/*
 
 jobs:
   dependencies:

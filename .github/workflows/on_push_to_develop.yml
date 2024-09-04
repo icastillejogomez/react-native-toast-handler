@@ -1,9 +1,9 @@
-name: On push to RC
+name: On push to develop
 
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   dependencies:
@@ -20,9 +20,11 @@ jobs:
     needs: qa
     uses: ./.github/workflows/test.yml
 
-  tag:
-    name: Tag
-    needs: test
-    uses: ./.github/workflows/tag.yml
+  publish:
+    name: Publish
+    needs: semver
+    uses: ./.github/workflows/publish.yml
+    with:
+      version: next
     secrets:
-      PERSONAL_ACCESS_TOKEN_FOR_PUSH_TAG: ${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_PUSH_TAG }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -16,6 +16,7 @@
     "eslint-plugin-jest": "28.8.2",
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-react-native": "4.1.0",
+    "husky": "9.1.5",
     "prettier": "3.3.3",
     "standard": "17.1.0",
     "typescript": "5.5.4"
@@ -34,10 +35,10 @@
   "main": "dist/index.js",
   "name": "react-native-toast-handler",
   "peerDependencies": {
-    "react-native-gesture-handler": "*",
-    "react-native-reanimated": "*",
+    "react": "*",
     "react-native": "*",
-    "react": "*"
+    "react-native-gesture-handler": "*",
+    "react-native-reanimated": "*"
   },
   "private": false,
   "repository": {
@@ -48,7 +49,8 @@
     "build": "rm -fr dist; tsc",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "test": "echo 'Running tests...'",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky"
   },
   "types": "dist/index.d.ts",
   "version": "0.2.0"

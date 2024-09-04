@@ -25,7 +25,6 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
   // Declare hooks
   const { state, dispatch } = useContext(ToastContext);
   const { activeToast, queue } = state;
-  // const [activeToast, setActiveToast] = useState<ToastInternalProps | null>(null)
   const progressToBeClosed = useSharedValue(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const toastGestureHandlerRef = useRef<ToastGestureHandlerRef>(null);

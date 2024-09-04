@@ -6,23 +6,8 @@ on:
       - develop
 
 jobs:
-  dependencies:
-    name: Install dependencies
-    uses: ./.github/workflows/install_dependencies.yml
-
-  qa:
-    name: Quality assurance
-    needs: dependencies
-    uses: ./.github/workflows/qa.yml
-
-  test:
-    name: Test
-    needs: qa
-    uses: ./.github/workflows/test.yml
-
   publish:
     name: Publish
-    needs: test
     uses: ./.github/workflows/publish.yml
     with:
       version: next

@@ -1,0 +1,20 @@
+name: Pull request pipeline
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  dependencies:
+    name: Install dependencies
+    uses: ./.github/workflows/install_dependencies.yml
+
+  qa:
+    name: Quality assurance
+    needs: dependencies
+    uses: ./.github/workflows/qa.yml
+
+  test:
+    name: Test
+    needs: qa
+    uses: ./.github/workflows/test.yml

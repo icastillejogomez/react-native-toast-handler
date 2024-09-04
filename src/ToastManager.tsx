@@ -4,6 +4,7 @@ import { ToastContext } from './ToastContext';
 import { ToastActionsKind, ToastManagerProps } from './types';
 import { ToastGestureHandler, ToastGestureHandlerRef } from './ToastGestureHandler';
 import { useSharedValue, withTiming } from 'react-native-reanimated';
+import { ToastCloseMethod } from './types/ToastCloseMethod';
 
 const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
   // Destructure props
@@ -29,14 +30,17 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const toastGestureHandlerRef = useRef<ToastGestureHandlerRef>(null);
 
-  const closeActiveToast = useCallback(() => {
-    if (activeToast) {
-      progressToBeClosed.value = 0;
-      dispatch({ type: ToastActionsKind.CLEAN_ACTIVE_TOAST });
-      activeToast.onClose?.();
-      onAnalyticsClose?.(activeToast);
-    }
-  }, [dispatch, onAnalyticsClose, progressToBeClosed, activeToast]);
+  const closeActiveToast = useCallback(
+    (method: ToastCloseMethod) => {
+      if (activeToast) {
+        progressToBeClosed.value = 0;
+        dispatch({ type: ToastActionsKind.CLEAN_ACTIVE_TOAST });
+        activeToast.onClose?.(method);
+        onAnalyticsClose?.(activeToast, method);
+      }
+    },
+    [dispatch, onAnalyticsClose, progressToBeClosed, activeToast],
+  );
 
   // Request for next toast
   useEffect(() => {
@@ -56,7 +60,7 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
       progressToBeClosed.value = withTiming(1, { duration: activeToast.duration * 1000 });
 
       timeoutRef.current = setTimeout(() => {
-        toastGestureHandlerRef.current?.closeActiveToast(); // <- This are going to call closeActiveToast()
+        toastGestureHandlerRef.current?.closeActiveToast('timeout'); // <- This are going to call closeActiveToast()
       }, activeToast.duration * 1000);
     }
     return () => {

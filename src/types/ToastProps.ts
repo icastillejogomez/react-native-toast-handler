@@ -1,3 +1,4 @@
+import { ToastCloseMethod } from './ToastCloseMethod';
 import { ToastPosition } from './ToastPosition';
 import { ToastSwipeDirection } from './ToastSwipeDirection';
 
@@ -61,7 +62,7 @@ export type ToastProps = {
   /**
    * Callback when the toast is closed
    */
-  onClose?: () => void;
+  onClose?: (method: ToastCloseMethod) => void;
 
   /**
    * Callback when the toast is removed manually

@@ -3,13 +3,14 @@ import { StyleSheet, Insets, GestureResponderEvent } from 'react-native';
 import { RenderToast, ToastInternalProps } from './types';
 import { SharedValue } from 'react-native-reanimated';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import { ToastCloseMethod } from './types/ToastCloseMethod';
 
 export type ToastWrapperProps = {
   toast: ToastInternalProps;
   hitSlop?: number | Insets;
   closeOnTap: boolean;
   passCloseHandler: boolean;
-  onClose: () => void;
+  onClose: (method: ToastCloseMethod) => void;
   renderToast: RenderToast;
   progressToBeClosed: SharedValue<number>;
 };
@@ -21,7 +22,7 @@ const ToastWrapper: FC<ToastWrapperProps> = (props) => {
   // Declare hooks
   const handlePress = useCallback(() => {
     toast.onPress?.();
-    if (closeOnTap) onClose();
+    if (closeOnTap) onClose('tap');
   }, [toast, closeOnTap, onClose]);
 
   const handleLongPress = useCallback(() => {
@@ -31,7 +32,7 @@ const ToastWrapper: FC<ToastWrapperProps> = (props) => {
   const handleClose = useCallback(
     (event?: GestureResponderEvent) => {
       event?.stopPropagation();
-      onClose();
+      onClose('manual');
     },
     [onClose],
   );

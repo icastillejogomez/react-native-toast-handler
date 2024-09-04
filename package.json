@@ -53,6 +53,7 @@
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "test": "echo 'Running tests...'",
     "typecheck": "tsc --noEmit",
+    "check": "npm run lint && npm run typecheck && npm run test",
     "prepare": "husky"
   },
   "types": "dist/index.d.ts",

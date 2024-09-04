@@ -16,11 +16,12 @@ import Animated, {
 import { RenderToast, ToastInternalProps, ToastOrientation, ToastPosition, ToastSwipeDirection } from './types';
 import { ToastWrapper } from './ToastWrapper';
 import { getAllowedToastOrientations } from './utils';
+import { ToastCloseMethod } from './types/ToastCloseMethod';
 
 const MIN_VELOCITY_TO_TRIGGER_CLOSE = 700;
 
 export type ToastGestureHandlerProps = {
-  onClose: () => void;
+  onClose: (method: ToastCloseMethod) => void;
   renderToast: RenderToast;
   hitSlop?: number | Insets;
   activeToast: ToastInternalProps;
@@ -34,7 +35,7 @@ export type ToastGestureHandlerProps = {
 };
 
 export type ToastGestureHandlerRef = {
-  closeActiveToast: () => void;
+  closeActiveToast: (method: ToastCloseMethod) => void;
 };
 
 const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandlerProps>((props, ref) => {
@@ -107,7 +108,7 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
   }, [topOffset, bottomOffset, position]);
 
   const handleAnimatedClose = useCallback(
-    (swipeDirection?: ToastSwipeDirection) => {
+    (method: ToastCloseMethod, swipeDirection?: ToastSwipeDirection) => {
       const selectedSwipeDirection = swipeDirection ?? allowedSwipeDirections.at(0);
 
       if (!selectedSwipeDirection) {
@@ -119,7 +120,7 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
               easing: Easing.linear,
             },
             () => {
-              runOnJS(onClose)();
+              runOnJS(onClose)(method);
             },
           );
         } else {
@@ -130,7 +131,7 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
               easing: Easing.linear,
             },
             () => {
-              runOnJS(onClose)();
+              runOnJS(onClose)(method);
             },
           );
         }
@@ -149,7 +150,7 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
             easing: Easing.linear,
           },
           () => {
-            runOnJS(onClose)();
+            runOnJS(onClose)(method);
           },
         );
       } else {
@@ -164,7 +165,7 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
             easing: Easing.linear,
           },
           () => {
-            runOnJS(onClose)();
+            runOnJS(onClose)(method);
           },
         );
       }
@@ -222,7 +223,7 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
 
       const velocity = activeSwipeOrientation.value === 'horizontal' ? event.velocityX : event.velocityY;
       if (Math.abs(velocity) > MIN_VELOCITY_TO_TRIGGER_CLOSE) {
-        handleAnimatedClose(direction);
+        handleAnimatedClose('swipe', direction);
         return;
       }
 
@@ -230,7 +231,7 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
         activeSwipeOrientation.value === 'vertical' ? Math.abs(event.translationY) : Math.abs(event.translationX);
       const distanceTrigger = activeSwipeOrientation.value === 'vertical' ? 50 : 150;
       if (distance > distanceTrigger) {
-        handleAnimatedClose(direction);
+        handleAnimatedClose('swipe', direction);
         return;
       }
 
@@ -257,8 +258,8 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
   }, [toastWrapperRef, setToastDimensions]);
 
   useImperativeHandle(ref, () => ({
-    closeActiveToast: (): void => {
-      handleAnimatedClose();
+    closeActiveToast: (method): void => {
+      handleAnimatedClose(method);
     },
   }));
 

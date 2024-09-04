@@ -3,6 +3,7 @@ import { RenderToast } from './RenderToast';
 import { ToastPosition } from './ToastPosition';
 import { ToastProps } from './ToastProps';
 import { ToastSwipeDirection } from './ToastSwipeDirection';
+import { ToastCloseMethod } from './ToastCloseMethod';
 
 export type ToastContextProviderProps = {
   renderToast: RenderToast;
@@ -16,6 +17,6 @@ export type ToastContextProviderProps = {
 
   onPush?: (toast: ToastProps) => void;
   onShow?: (toast: ToastProps) => void;
-  onClose?: (toast: ToastProps) => void;
+  onClose?: (toast: ToastProps, method: ToastCloseMethod) => void;
   onRemove?: (toast: ToastProps) => void;
 };

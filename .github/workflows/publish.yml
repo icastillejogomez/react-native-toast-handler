@@ -4,7 +4,10 @@ on:
   workflow_call:
     inputs:
       version:
-        required: true
+        required: false
+        type: string
+      tag:
+        required: false
         type: string
     secrets:
       NPM_TOKEN:
@@ -55,4 +58,5 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           strategy: all
-          tag: ${{ inputs.version }}
+          version: ${{ inputs.version }}
+          tag: ${{ inputs.tag }}

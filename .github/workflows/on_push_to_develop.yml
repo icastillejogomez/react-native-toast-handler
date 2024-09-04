@@ -10,6 +10,6 @@ jobs:
     name: Publish
     uses: ./.github/workflows/publish.yml
     with:
-      version: next
+      tag: next
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

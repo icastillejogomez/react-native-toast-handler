@@ -19,6 +19,7 @@ const ToastWrapper: FC<ToastWrapperProps> = (props) => {
 
   // Declare hooks
   const handlePress = useCallback(() => {
+    console.log('handlePress');
     toast.onPress?.();
     if (closeOnTap) onClose();
   }, [toast, closeOnTap, onClose]);
@@ -27,10 +28,11 @@ const ToastWrapper: FC<ToastWrapperProps> = (props) => {
     toast.onLongPress?.();
   }, [toast]);
 
-  const handlePressClose = useCallback(
+  const handleClose = useCallback(
     (event?: GestureResponderEvent) => {
-      onClose();
+      console.log('handlePressClose', event);
       event?.stopPropagation();
+      onClose();
     },
     [onClose],
   );
@@ -40,7 +42,7 @@ const ToastWrapper: FC<ToastWrapperProps> = (props) => {
       {renderToast({
         status: toast.status,
         title: toast.title,
-        onClose: passCloseHandler ? handlePressClose : undefined,
+        onClose: passCloseHandler ? handleClose : undefined,
         extraData: toast.extraData ?? {},
         message: toast.message,
         progressToBeClosed,

@@ -22,7 +22,6 @@ jobs:
 
   publish:
     name: Publish
-    needs: semver
     uses: ./.github/workflows/publish.yml
     with:
       version: next

@@ -64,6 +64,11 @@ export type ToastProps = {
   onClose?: () => void;
 
   /**
+   * Callback when the toast is removed manually
+   */
+  onRemove?: () => void;
+
+  /**
    * Direction from which the toast will enter
    */
   enteringDirection?: ToastSwipeDirection;

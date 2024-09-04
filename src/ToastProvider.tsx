@@ -8,11 +8,11 @@ import { ToastContextProviderProps } from './types';
 
 export type ToastProviderProps = PropsWithChildren<ToastContextProviderProps>;
 
-const ToastProvider: FC<ToastProviderProps> = ({ children, onPush, ...props }) => {
+const ToastProvider: FC<ToastProviderProps> = ({ children, onPush, onRemove, ...props }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <ToastContext.Provider value={{ state, dispatch, onPush }}>
+    <ToastContext.Provider value={{ state, dispatch, onPush, onRemove }}>
       <ToastManager {...props}>{children}</ToastManager>
     </ToastContext.Provider>
   );

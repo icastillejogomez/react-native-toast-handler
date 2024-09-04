@@ -1,5 +1,5 @@
 import React, { FC, useCallback } from 'react';
-import { StyleSheet, Pressable, Insets } from 'react-native';
+import { StyleSheet, Pressable, Insets, GestureResponderEvent } from 'react-native';
 import { RenderToast, ToastInternalProps } from './types';
 import { SharedValue } from 'react-native-reanimated';
 
@@ -27,17 +27,23 @@ const ToastWrapper: FC<ToastWrapperProps> = (props) => {
     toast.onLongPress?.();
   }, [toast]);
 
+  const handlePressClose = useCallback(
+    (event?: GestureResponderEvent) => {
+      onClose();
+      event?.stopPropagation();
+    },
+    [onClose],
+  );
+
   return (
     <Pressable hitSlop={hitSlop} style={styles.container} onPress={handlePress} onLongPress={handleLongPress}>
       {renderToast({
-        toast: {
-          status: toast.status,
-          title: toast.title,
-          onClose: passCloseHandler ? onClose : undefined,
-          extraData: toast.extraData ?? {},
-          message: toast.message,
-          progressToBeClosed,
-        },
+        status: toast.status,
+        title: toast.title,
+        onClose: passCloseHandler ? handlePressClose : undefined,
+        extraData: toast.extraData ?? {},
+        message: toast.message,
+        progressToBeClosed,
       })}
     </Pressable>
   );

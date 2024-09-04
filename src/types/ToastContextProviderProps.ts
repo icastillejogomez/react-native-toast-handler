@@ -17,4 +17,5 @@ export type ToastContextProviderProps = {
   onPush?: (toast: ToastProps) => void;
   onShow?: (toast: ToastProps) => void;
   onClose?: (toast: ToastProps) => void;
+  onRemove?: (toast: ToastProps) => void;
 };

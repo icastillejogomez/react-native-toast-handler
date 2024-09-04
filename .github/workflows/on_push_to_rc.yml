@@ -1,4 +1,4 @@
-name: On push to RC
+name: On push to rc/*
 
 on:
   push:

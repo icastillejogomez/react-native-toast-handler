@@ -7,7 +7,6 @@ export type RenderToastProps = {
   message: string;
   extraData: Record<string, unknown>;
 
-  onPress?: () => void;
   onClose?: (event?: GestureResponderEvent) => void;
 
   /**

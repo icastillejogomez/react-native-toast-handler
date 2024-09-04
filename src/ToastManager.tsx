@@ -29,6 +29,7 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const toastGestureHandlerRef = useRef<ToastGestureHandlerRef>(null);
 
+  // Declare callbacks
   const closeActiveToast = useCallback(
     (method: ToastCloseMethod) => {
       if (activeToast) {

@@ -10,6 +10,7 @@ export type ToastWrapperProps = {
   hitSlop?: number | Insets;
   closeOnTap: boolean;
   passCloseHandler: boolean;
+  maxWidth: number;
   onClose: (method: ToastCloseMethod) => void;
   renderToast: RenderToast;
   progressToBeClosed: SharedValue<number>;
@@ -17,7 +18,7 @@ export type ToastWrapperProps = {
 
 const ToastWrapper: FC<ToastWrapperProps> = (props) => {
   // Destructure props
-  const { toast, closeOnTap, passCloseHandler, onClose, renderToast, progressToBeClosed, hitSlop } = props;
+  const { toast, closeOnTap, passCloseHandler, maxWidth, onClose, renderToast, progressToBeClosed, hitSlop } = props;
 
   // Declare hooks
   const handlePress = useCallback(() => {
@@ -50,6 +51,7 @@ const ToastWrapper: FC<ToastWrapperProps> = (props) => {
         onClose: passCloseHandler ? handleClose : undefined,
         extraData: toast.extraData ?? {},
         message: toast.message,
+        maxWidth,
         progressToBeClosed,
       })}
     </TouchableWithoutFeedback>

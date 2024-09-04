@@ -14,6 +14,7 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
     defaultBottomOffset,
     defaultTopOffset,
     defaultPosition,
+    defaultMarginHorizontal,
     defaultSwipeDirection,
     defaultPassCloseHandler,
     defaultCloseOnTap,
@@ -25,11 +26,11 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
   // Declare hooks
   const { state, dispatch } = useContext(ToastContext);
   const { activeToast, queue } = state;
-  // const [activeToast, setActiveToast] = useState<ToastInternalProps | null>(null)
   const progressToBeClosed = useSharedValue(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const toastGestureHandlerRef = useRef<ToastGestureHandlerRef>(null);
 
+  // Declare callbacks
   const closeActiveToast = useCallback(
     (method: ToastCloseMethod) => {
       if (activeToast) {
@@ -71,7 +72,7 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
   }, [toastGestureHandlerRef, progressToBeClosed, activeToast, closeActiveToast]);
 
   return (
-    <View style={styles.container}>
+    <View style={[StyleSheet.absoluteFill, styles.container]}>
       {children}
       {activeToast && (
         <ToastGestureHandler
@@ -80,6 +81,7 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
           renderToast={renderToast}
           progressToBeClosed={progressToBeClosed}
           onClose={closeActiveToast}
+          defaultMarginHorizontal={defaultMarginHorizontal ?? 16}
           hitSlop={hitSlop}
           defaultBottomOffset={defaultBottomOffset}
           defaultTopOffset={defaultTopOffset}
@@ -95,9 +97,7 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
 ToastManager.displayName = 'ToastManager';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+  container: {},
 });
 
 export { ToastManager };

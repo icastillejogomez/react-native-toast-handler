@@ -20,7 +20,6 @@ const ToastWrapper: FC<ToastWrapperProps> = (props) => {
 
   // Declare hooks
   const handlePress = useCallback(() => {
-    console.log('handlePress');
     toast.onPress?.();
     if (closeOnTap) onClose();
   }, [toast, closeOnTap, onClose]);
@@ -31,7 +30,6 @@ const ToastWrapper: FC<ToastWrapperProps> = (props) => {
 
   const handleClose = useCallback(
     (event?: GestureResponderEvent) => {
-      console.log('handlePressClose', event);
       event?.stopPropagation();
       onClose();
     },

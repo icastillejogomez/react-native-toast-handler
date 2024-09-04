@@ -64,6 +64,10 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
 
   const toastWrapperRef = useAnimatedRef<View>();
   const [toastDimensions, setToastDimensions] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
+  const maxToastWrapperWidth = useMemo(
+    () => screenDimensions.width - (activeToast.marginHorizontal ?? defaultMarginHorizontal) * 2,
+    [screenDimensions, activeToast, defaultMarginHorizontal],
+  );
 
   const bottomOffset = useMemo(
     () => activeToast?.bottomOffset ?? defaultBottomOffset,
@@ -278,12 +282,13 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
         ]}
         entering={entering}
       >
-        <View style={[styles.wrapper, { marginHorizontal: activeToast.marginHorizontal ?? defaultMarginHorizontal }]}>
+        <View style={[styles.wrapper, { width: maxToastWrapperWidth }]}>
           <ToastWrapper
             toast={activeToast}
             hitSlop={hitSlop}
             closeOnTap={activeToast.closeOnTap ?? defaultCloseOnTap ?? false}
             passCloseHandler={activeToast.passCloseHandler ?? defaultPassCloseHandler ?? false}
+            maxWidth={maxToastWrapperWidth}
             onClose={handleAnimatedClose}
             renderToast={renderToast}
             progressToBeClosed={progressToBeClosed}
@@ -298,12 +303,13 @@ ToastGestureHandler.displayName = 'ToastGestureHandler';
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
+    display: 'flex',
     alignSelf: 'center',
+    alignItems: 'center',
     zIndex: 999,
   },
   wrapper: {
     flex: 1,
-    alignSelf: 'center',
     alignItems: 'center',
   },
 });

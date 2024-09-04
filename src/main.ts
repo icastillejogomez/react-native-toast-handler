@@ -1,7 +1,7 @@
-export type ModuleName = string
+export type ModuleName = string;
 
-const moduleName: ModuleName = 'react-native-toast-handler'
+const moduleName: ModuleName = 'react-native-toast-handler';
 
-export default moduleName
+export default moduleName;
 
-export * from './utils/index'
+export * from './utils/index';

@@ -1,15 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export function isFunction(value: any): boolean {
-  return typeof value === 'function'
+  return typeof value === 'function';
 }
 
 export function isString(value: any): boolean {
-  return typeof value === 'string'
+  return typeof value === 'string';
 }
 
 export function isObject(value: any): boolean {
-  return typeof value === 'object'
+  return typeof value === 'object';
 }
 
 export function isEmpty(value: any): boolean {
-  return value === undefined || value === null
+  return value === undefined || value === null;
 }

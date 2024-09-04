@@ -40,6 +40,9 @@
     "react-native-gesture-handler": "*",
     "react-native-reanimated": "*"
   },
+  "overrides": {
+    "react-native-reanimated": "*"
+  },
   "private": false,
   "repository": {
     "type": "git",

@@ -1,7 +1,8 @@
 import React, { FC, useCallback } from 'react';
-import { StyleSheet, Pressable, Insets, GestureResponderEvent } from 'react-native';
+import { StyleSheet, Insets, GestureResponderEvent } from 'react-native';
 import { RenderToast, ToastInternalProps } from './types';
 import { SharedValue } from 'react-native-reanimated';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 export type ToastWrapperProps = {
   toast: ToastInternalProps;
@@ -38,7 +39,12 @@ const ToastWrapper: FC<ToastWrapperProps> = (props) => {
   );
 
   return (
-    <Pressable hitSlop={hitSlop} style={styles.container} onPress={handlePress} onLongPress={handleLongPress}>
+    <TouchableWithoutFeedback
+      hitSlop={hitSlop}
+      style={styles.container}
+      onPress={handlePress}
+      onLongPress={handleLongPress}
+    >
       {renderToast({
         status: toast.status,
         title: toast.title,
@@ -47,7 +53,7 @@ const ToastWrapper: FC<ToastWrapperProps> = (props) => {
         message: toast.message,
         progressToBeClosed,
       })}
-    </Pressable>
+    </TouchableWithoutFeedback>
   );
 };
 ToastWrapper.displayName = 'ToastWrapper';

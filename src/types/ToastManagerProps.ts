@@ -9,6 +9,7 @@ export type ToastManagerProps = {
   renderToast: RenderToast;
   defaultBottomOffset: number;
   defaultTopOffset: number;
+  defaultMarginHorizontal?: number;
   hitSlop?: number | Insets;
   defaultPassCloseHandler?: boolean;
   defaultCloseOnTap?: boolean;

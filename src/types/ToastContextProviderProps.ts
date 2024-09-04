@@ -13,6 +13,7 @@ export type ToastContextProviderProps = {
   defaultPassCloseHandler?: boolean;
   defaultCloseOnTap?: boolean;
   defaultPosition?: ToastPosition;
+  defaultMarginHorizontal?: number;
   defaultSwipeDirection?: ToastSwipeDirection | ToastSwipeDirection[];
 
   onPush?: (toast: ToastProps) => void;

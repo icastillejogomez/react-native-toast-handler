@@ -14,6 +14,7 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
     defaultBottomOffset,
     defaultTopOffset,
     defaultPosition,
+    defaultMarginHorizontal,
     defaultSwipeDirection,
     defaultPassCloseHandler,
     defaultCloseOnTap,
@@ -71,7 +72,7 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
   }, [toastGestureHandlerRef, progressToBeClosed, activeToast, closeActiveToast]);
 
   return (
-    <View style={styles.container}>
+    <View style={[StyleSheet.absoluteFill, styles.container]}>
       {children}
       {activeToast && (
         <ToastGestureHandler
@@ -80,6 +81,7 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
           renderToast={renderToast}
           progressToBeClosed={progressToBeClosed}
           onClose={closeActiveToast}
+          defaultMarginHorizontal={defaultMarginHorizontal ?? 16}
           hitSlop={hitSlop}
           defaultBottomOffset={defaultBottomOffset}
           defaultTopOffset={defaultTopOffset}
@@ -95,9 +97,7 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
 ToastManager.displayName = 'ToastManager';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+  container: {},
 });
 
 export { ToastManager };

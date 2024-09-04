@@ -1,5 +1,5 @@
 import React, { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useState } from 'react';
-import { Insets, StyleSheet, View } from 'react-native';
+import { Insets, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { GestureDetector, Gesture } from 'react-native-gesture-handler';
 import Animated, {
   useSharedValue,
@@ -25,6 +25,7 @@ export type ToastGestureHandlerProps = {
   renderToast: RenderToast;
   hitSlop?: number | Insets;
   activeToast: ToastInternalProps;
+  defaultMarginHorizontal: number;
   progressToBeClosed: SharedValue<number>;
   defaultBottomOffset: number;
   defaultTopOffset: number;
@@ -45,6 +46,7 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
     onClose,
     hitSlop,
     activeToast,
+    defaultMarginHorizontal,
     progressToBeClosed,
     defaultBottomOffset,
     defaultTopOffset,
@@ -55,6 +57,7 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
   } = props;
 
   // Declare hooks
+  const screenDimensions = useWindowDimensions();
   const activeSwipeOrientation = useSharedValue<ToastOrientation>('vertical');
   const translateY = useSharedValue(0);
   const translateX = useSharedValue(0);
@@ -267,18 +270,25 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
     <GestureDetector gesture={pan}>
       <Animated.View
         ref={toastWrapperRef}
-        style={[styles.container, absoluteInsets, animatedStyle]}
+        style={[
+          styles.container,
+          { width: screenDimensions.width, maxWidth: screenDimensions.width },
+          absoluteInsets,
+          animatedStyle,
+        ]}
         entering={entering}
       >
-        <ToastWrapper
-          toast={activeToast}
-          hitSlop={hitSlop}
-          closeOnTap={activeToast.closeOnTap ?? defaultCloseOnTap ?? false}
-          passCloseHandler={activeToast.passCloseHandler ?? defaultPassCloseHandler ?? false}
-          onClose={handleAnimatedClose}
-          renderToast={renderToast}
-          progressToBeClosed={progressToBeClosed}
-        />
+        <View style={[styles.wrapper, { marginHorizontal: activeToast.marginHorizontal ?? defaultMarginHorizontal }]}>
+          <ToastWrapper
+            toast={activeToast}
+            hitSlop={hitSlop}
+            closeOnTap={activeToast.closeOnTap ?? defaultCloseOnTap ?? false}
+            passCloseHandler={activeToast.passCloseHandler ?? defaultPassCloseHandler ?? false}
+            onClose={handleAnimatedClose}
+            renderToast={renderToast}
+            progressToBeClosed={progressToBeClosed}
+          />
+        </View>
       </Animated.View>
     </GestureDetector>
   );
@@ -290,7 +300,11 @@ const styles = StyleSheet.create({
     position: 'absolute',
     alignSelf: 'center',
     zIndex: 999,
-    maxWidth: '90%',
+  },
+  wrapper: {
+    flex: 1,
+    alignSelf: 'center',
+    alignItems: 'center',
   },
 });
 

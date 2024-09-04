@@ -93,4 +93,9 @@ export type ToastProps = {
    * Offset from the top of the screen (counting safe area wrapper)
    */
   topOffset?: number;
+
+  /**
+   * Offset from the left and right of the screen (in fact, from the ToastProvider parent)
+   */
+  marginHorizontal?: number;
 };

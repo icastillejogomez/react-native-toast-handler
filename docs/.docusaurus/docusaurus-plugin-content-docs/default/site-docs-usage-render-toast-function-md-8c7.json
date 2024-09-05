@@ -1,0 +1,31 @@
+{
+  "id": "usage/docs-usage-render-toast-function",
+  "title": "The render toast function of React Native Toast Handler",
+  "description": "",
+  "source": "@site/docs/usage/render_toast_function.md",
+  "sourceDirName": "usage",
+  "slug": "/usage/render-toast-function",
+  "permalink": "/docs/usage/render-toast-function",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/icastillejogomez/react-native-toast-handler/tree/develop/docs/docs/usage/render_toast_function.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "docs-usage-render-toast-function",
+    "title": "The render toast function of React Native Toast Handler",
+    "sidebar_position": 2,
+    "sidebar_label": "Render toast function",
+    "slug": "/usage/render-toast-function"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Default values",
+    "permalink": "/docs/usage/default-values"
+  },
+  "next": {
+    "title": "Statuses",
+    "permalink": "/docs/usage/statuses"
+  }
+}

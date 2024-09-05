@@ -1,0 +1,31 @@
+{
+  "id": "analytics/docs-analytics-detect-toast",
+  "title": "How to indentify toasts in React Native Toast Handler",
+  "description": "",
+  "source": "@site/docs/analytics/detect_toast.md",
+  "sourceDirName": "analytics",
+  "slug": "/analytics/identify-toast",
+  "permalink": "/docs/analytics/identify-toast",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/icastillejogomez/react-native-toast-handler/tree/develop/docs/docs/analytics/detect_toast.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "docs-analytics-detect-toast",
+    "title": "How to indentify toasts in React Native Toast Handler",
+    "sidebar_position": 1,
+    "sidebar_label": "Identify toasts",
+    "slug": "/analytics/identify-toast"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Animating timeout",
+    "permalink": "/docs/usage/animating_timeout"
+  },
+  "next": {
+    "title": "Toast events",
+    "permalink": "/docs/analytics/events"
+  }
+}

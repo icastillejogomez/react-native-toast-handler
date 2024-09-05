@@ -1,0 +1,31 @@
+{
+  "id": "introduction copy/docs-what-is-react-native-toast-handler",
+  "title": "What is React Native Toast Handler?",
+  "description": "What?",
+  "source": "@site/docs/introduction copy/presentation.md",
+  "sourceDirName": "introduction copy",
+  "slug": "/about",
+  "permalink": "/docs/about",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/icastillejogomez/react-native-toast-handler/tree/develop/docs/docs/introduction copy/presentation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "docs-what-is-react-native-toast-handler",
+    "title": "What is React Native Toast Handler?",
+    "sidebar_position": 1,
+    "sidebar_label": "Presentation",
+    "slug": "/about"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Getting started",
+    "permalink": "/docs/getting-started"
+  },
+  "next": {
+    "title": "Instalation",
+    "permalink": "/docs/instalation"
+  }
+}

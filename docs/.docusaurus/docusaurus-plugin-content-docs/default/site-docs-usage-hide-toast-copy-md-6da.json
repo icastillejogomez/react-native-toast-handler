@@ -1,0 +1,31 @@
+{
+  "id": "usage/docs-usage-hide-toast",
+  "title": "Hide toasts in React Native Toast Handler",
+  "description": "",
+  "source": "@site/docs/usage/hide_toast copy.md",
+  "sourceDirName": "usage",
+  "slug": "/usage/hide-toast",
+  "permalink": "/docs/usage/hide-toast",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/icastillejogomez/react-native-toast-handler/tree/develop/docs/docs/usage/hide_toast copy.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "docs-usage-hide-toast",
+    "title": "Hide toasts in React Native Toast Handler",
+    "sidebar_position": 3,
+    "sidebar_label": "Hide toasts",
+    "slug": "/usage/hide-toast"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Show toasts",
+    "permalink": "/docs/usage/show-toast"
+  },
+  "next": {
+    "title": "Hide toasts",
+    "permalink": "/docs/usage/hide-toast"
+  }
+}

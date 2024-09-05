@@ -1,0 +1,31 @@
+{
+  "id": "introduction/docs-getting-started",
+  "title": "Getting started with React Native Toast Handler",
+  "description": "",
+  "source": "@site/docs/introduction/getting_started.md",
+  "sourceDirName": "introduction",
+  "slug": "/getting-started",
+  "permalink": "/docs/getting-started",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/icastillejogomez/react-native-toast-handler/tree/develop/docs/docs/introduction/getting_started.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "docs-getting-started",
+    "title": "Getting started with React Native Toast Handler",
+    "sidebar_position": 3,
+    "sidebar_label": "Getting started",
+    "slug": "/getting-started"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Instalation",
+    "permalink": "/docs/instalation"
+  },
+  "next": {
+    "title": "Default values",
+    "permalink": "/docs/usage/default-values"
+  }
+}

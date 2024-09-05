@@ -114,15 +114,15 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'aba'),
+    component: ComponentCreator('/docs', 'e5f'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', '894'),
+        component: ComponentCreator('/docs', 'ed8'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', '354'),
+            component: ComponentCreator('/docs', '6db'),
             routes: [
               {
                 path: '/docs/about',
@@ -155,14 +155,32 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/docs/examples/timeout-animation',
+                component: ComponentCreator('/docs/examples/timeout-animation', 'bd5'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/docs/getting-started',
                 component: ComponentCreator('/docs/getting-started', '07c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/docs/hooks/useToast',
+                component: ComponentCreator('/docs/hooks/useToast', '677'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/docs/instalation',
                 component: ComponentCreator('/docs/instalation', '68b'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/reference/toast-provider',
+                component: ComponentCreator('/docs/reference/toast-provider', 'a17'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

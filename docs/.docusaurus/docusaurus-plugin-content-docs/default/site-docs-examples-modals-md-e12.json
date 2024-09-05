@@ -23,5 +23,9 @@
   "previous": {
     "title": "Expo Router",
     "permalink": "/docs/examples/expo-router"
+  },
+  "next": {
+    "title": "Timeout animation",
+    "permalink": "/docs/examples/timeout-animation"
   }
 }

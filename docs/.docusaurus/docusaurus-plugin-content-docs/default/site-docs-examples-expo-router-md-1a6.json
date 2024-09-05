@@ -21,8 +21,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Toast events",
-    "permalink": "/docs/analytics/events"
+    "title": "ToastProvider",
+    "permalink": "/docs/reference/toast-provider"
   },
   "next": {
     "title": "Using with modals",

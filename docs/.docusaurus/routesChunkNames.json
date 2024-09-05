@@ -249,17 +249,17 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/docs-aba": {
+  "/docs-e5f": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docsaba-d7c"
     }
   },
-  "/docs-894": {
+  "/docs-ed8": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---docs-005-788"
   },
-  "/docs-354": {
+  "/docs-6db": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/docs/about-8c1": {
@@ -268,31 +268,43 @@
   },
   "/docs/analytics/events-c61": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-analytics-identify-toast-548-386"
+    "content": "content---docs-analytics-events-548-8a2"
   },
   "/docs/analytics/identify-toast-8ef": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-aboutf-6-a-6bd"
+    "content": "content---docs-analytics-identify-toastf-6-a-5db"
   },
   "/docs/examples/expo-router-ef4": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-instalation-1-a-6-4d8"
+    "content": "content---docs-examples-expo-router-1-a-6-943"
   },
   "/docs/examples/modals-09d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-instalatione-12-58a"
+    "content": "content---docs-examples-modalse-12-51d"
+  },
+  "/docs/examples/timeout-animation-bd5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-examples-timeout-animation-990-c98"
   },
   "/docs/getting-started-07c": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-getting-started-8-b-8-558"
   },
+  "/docs/hooks/useToast-677": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-hooks-use-toast-9-c-3-9ee"
+  },
   "/docs/instalation-68b": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-instalation-5-d-4-a32"
   },
+  "/docs/reference/toast-provider-a17": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-reference-toast-providerc-8-b-334"
+  },
   "/docs/usage/animating_timeout-96a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-usage-default-valuesf-3-b-a73"
+    "content": "content---docs-usage-animating-timeoutf-3-b-dea"
   },
   "/docs/usage/default-values-df1": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -300,7 +312,7 @@
   },
   "/docs/usage/extra_data-130": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-usage-default-valuesc-92-d41"
+    "content": "content---docs-usage-extra-datac-92-232"
   },
   "/docs/usage/hide-toast-c2c": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -324,7 +336,7 @@
   },
   "/docs/usage/toast-callbacks-67d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-usage-default-valuesac-0-db5"
+    "content": "content---docs-usage-toast-callbacksac-0-40b"
   },
   "/-e5f": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",

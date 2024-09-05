@@ -31,6 +31,16 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "examples/docs-examples-timeout-animation",
+              "path": "/docs/examples/timeout-animation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "hooks/docs-hooks-useToast",
+              "path": "/docs/hooks/useToast",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "introduction/docs-getting-started",
               "path": "/docs/getting-started",
               "sidebar": "tutorialSidebar"
@@ -43,6 +53,11 @@
             {
               "id": "introduction/docs-what-is-react-native-toast-handler",
               "path": "/docs/about",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "reference/docs-reference-toast-provider",
+              "path": "/docs/reference/toast-provider",
               "sidebar": "tutorialSidebar"
             },
             {

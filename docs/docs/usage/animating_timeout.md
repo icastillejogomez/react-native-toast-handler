@@ -1,3 +1,4 @@
+
 ---
 id: docs-usage-animating-timeout
 title: How to animate the timeout of a toast in React Native Toast Handler

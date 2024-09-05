@@ -21,11 +21,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Remove toasts",
-    "permalink": "/docs/usage/remove-toast"
-  },
-  "next": {
     "title": "Pass extra data to toast",
     "permalink": "/docs/usage/extra_data"
+  },
+  "next": {
+    "title": "Animating timeout",
+    "permalink": "/docs/usage/animating_timeout"
   }
 }

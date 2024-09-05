@@ -1,7 +1,7 @@
 {
   "id": "usage/docs-usage-default-values",
   "title": "Default values",
-  "description": "",
+  "description": "Como habrás podido observar, toda la mágica ocurre dentro del componente ToastProvider. Este componente tiene tres propiedades obligatorias que son renderToast, defaultBottomOffset y defaultTopOffset pero existen muchas otras propiedades que son opcionales.",
   "source": "@site/docs/usage/default_values.md",
   "sourceDirName": "usage",
   "slug": "/usage/default-values",

@@ -56,8 +56,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "reference/docs-reference-toast-provider",
-              "path": "/docs/reference/toast-provider",
+              "id": "reference/components/docs-reference-components-toast-provider",
+              "path": "/docs/reference/components/toast-provider",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "reference/types/docs-reference-types-toast-position",
+              "path": "/docs/reference/types/toast-position",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "reference/types/docs-reference-types-toast-swipe-direction",
+              "path": "/docs/reference/types/toast-swipe-direction",
               "sidebar": "tutorialSidebar"
             },
             {

@@ -21,8 +21,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "ToastProvider",
-    "permalink": "/docs/reference/toast-provider"
+    "title": "ToastSwipeDirection",
+    "permalink": "/docs/reference/types/toast-swipe-direction"
   },
   "next": {
     "title": "Using with modals",

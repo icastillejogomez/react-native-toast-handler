@@ -114,15 +114,15 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '17c'),
+    component: ComponentCreator('/docs', '973'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', 'd34'),
+        component: ComponentCreator('/docs', '27f'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', 'a9a'),
+            component: ComponentCreator('/docs', '4de'),
             routes: [
               {
                 path: '/docs/analytics/events',
@@ -156,7 +156,7 @@ export default [
               },
               {
                 path: '/docs/getting-started',
-                component: ComponentCreator('/docs/getting-started', '07c'),
+                component: ComponentCreator('/docs/getting-started', '766'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -179,8 +179,20 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/reference/toast-provider',
-                component: ComponentCreator('/docs/reference/toast-provider', 'a17'),
+                path: '/docs/reference/components/toast-provider',
+                component: ComponentCreator('/docs/reference/components/toast-provider', '1c9'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/reference/types/toast-position',
+                component: ComponentCreator('/docs/reference/types/toast-position', '120'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/reference/types/toast-swipe-direction',
+                component: ComponentCreator('/docs/reference/types/toast-swipe-direction', '759'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

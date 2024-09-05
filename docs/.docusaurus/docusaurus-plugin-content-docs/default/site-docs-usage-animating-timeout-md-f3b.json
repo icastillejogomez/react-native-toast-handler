@@ -21,8 +21,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Pass extra data to toast",
-    "permalink": "/docs/usage/extra_data"
+    "title": "Toast callbacks",
+    "permalink": "/docs/usage/toast-callbacks"
   },
   "next": {
     "title": "Identify toasts",

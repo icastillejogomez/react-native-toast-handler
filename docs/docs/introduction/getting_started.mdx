@@ -19,6 +19,7 @@ Is not mandatory to wrap you ToastProvider with a SafeAreaView but take into acc
 ```jsx
 /* ... */
 import { SafeAreaView, Text, StyleSheet } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ToastProvider } from 'react-native-toast-handler';
 /* ... */
 
@@ -42,15 +43,17 @@ function Navigator() {
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <ToastProvider
-        defaultBottomOffset={100}
-        defaultTopOffset={70}
-        renderToast={({ message }) => <Toast message={message} />}
-      >
-        <Navigator />
-      </ToastProvider>
-    </SafeAreaView>
+    <GestureHandlerRootView>
+      <SafeAreaView style={{ flex: 1 }}>
+        <ToastProvider
+          defaultBottomOffset={100}
+          defaultTopOffset={120}
+          renderToast={({ message }) => <Toast message={message} />}
+        >
+          <Navigator />
+        </ToastProvider>
+      </SafeAreaView>
+    </GestureHandlerRootView>
   );
 }
 
@@ -67,6 +70,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,
+    paddingVertical: 8,
+    paddingHorizontal: 16,
   },
 })
 
@@ -104,3 +109,13 @@ function MyComponent() {
 :::note[Learn about the statuses]
 You can learn more about the statuses in the [statuses](/docs/usage/statuses) page.
 :::
+
+
+<div className="two-columns">
+  <img src="/img/screenshoots/getting-started/iphone.png" width="100%" height="auto" />
+  <img src="/img/screenshoots/getting-started/android.png" width="100%" height="auto" />
+</div>
+
+### No way to close them?
+
+Are you having problems to close the toasts? This is the expected behavior 😇. Give me a minute to explain how it works in the next section where we're going to declare some default values for all the toasts in your application.

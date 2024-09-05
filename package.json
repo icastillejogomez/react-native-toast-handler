@@ -35,12 +35,13 @@
   "main": "dist/index.js",
   "name": "react-native-toast-handler",
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*",
     "react-native-gesture-handler": "*",
-    "react-native-reanimated": "*"
+    "react-native-reanimated": "*",
+    "react-native": "*",
+    "react": "*"
   },
   "overrides": {
+    "react-native-gesture-handler": "*",
     "react-native-reanimated": "*"
   },
   "private": false,

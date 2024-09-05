@@ -28,3 +28,26 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Clase reusable para una disposición en dos columnas */
+.two-columns {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.two-columns img {
+  flex: 1 1 calc(50% - 20px); /* Las imágenes ocuparán el 50% del contenedor */
+  max-width: 350px; /* Escalarán sin sobrepasar el ancho */
+  height: auto; /* Mantendrán proporción */
+}
+
+/* Disposición vertical en pantallas más pequeñas */
+@media (max-width: 600px) {
+  .two-columns img {
+    flex: 1 1 100%; /* Las imágenes ocuparán el 100% del contenedor */
+  }
+}

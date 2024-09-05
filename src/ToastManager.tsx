@@ -52,7 +52,10 @@ const ToastManager: FC<PropsWithChildren<ToastManagerProps>> = (props) => {
 
   // Emit onShow event when toast is active
   useEffect(() => {
-    if (activeToast) onAnalyticsShow?.(activeToast);
+    if (activeToast) {
+      onAnalyticsShow?.(activeToast);
+      activeToast.onShow?.();
+    }
   }, [onAnalyticsShow, activeToast]);
 
   // Active toast duration timeout

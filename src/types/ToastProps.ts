@@ -50,6 +50,11 @@ export type ToastProps = {
   passCloseHandler?: boolean;
 
   /**
+   * Callback executed when the toast is shown
+   */
+  onShow?: () => void;
+
+  /**
    * Callback when the toast is pressed
    */
   onPress?: () => void;

@@ -1,0 +1,31 @@
+{
+  "id": "usage/docs-usage-extra-data",
+  "title": "How to pass extra data to toast in React Native Toast Handler",
+  "description": "",
+  "source": "@site/docs/usage/extra_data.md",
+  "sourceDirName": "usage",
+  "slug": "/usage/extra_data",
+  "permalink": "/docs/usage/extra_data",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/icastillejogomez/react-native-toast-handler/tree/develop/docs/docs/usage/extra_data.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "id": "docs-usage-extra-data",
+    "title": "How to pass extra data to toast in React Native Toast Handler",
+    "sidebar_position": 7,
+    "sidebar_label": "Pass extra data to toast",
+    "slug": "/usage/extra_data"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Remove toasts",
+    "permalink": "/docs/usage/remove-toast"
+  },
+  "next": {
+    "title": "Toast callbacks",
+    "permalink": "/docs/usage/toast-callbacks"
+  }
+}

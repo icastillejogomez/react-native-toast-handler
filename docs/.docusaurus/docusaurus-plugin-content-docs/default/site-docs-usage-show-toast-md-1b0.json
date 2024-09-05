@@ -1,0 +1,31 @@
+{
+  "id": "usage/docs-usage-show-toast",
+  "title": "Show toasts in React Native Toast Handler",
+  "description": "Introduction",
+  "source": "@site/docs/usage/show_toast.md",
+  "sourceDirName": "usage",
+  "slug": "/usage/show-toast",
+  "permalink": "/docs/usage/show-toast",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/icastillejogomez/react-native-toast-handler/tree/develop/docs/docs/usage/show_toast.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "docs-usage-show-toast",
+    "title": "Show toasts in React Native Toast Handler",
+    "sidebar_position": 4,
+    "sidebar_label": "Show toasts",
+    "slug": "/usage/show-toast"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Statuses",
+    "permalink": "/docs/usage/statuses"
+  },
+  "next": {
+    "title": "Hide toasts",
+    "permalink": "/docs/usage/hide-toast"
+  }
+}

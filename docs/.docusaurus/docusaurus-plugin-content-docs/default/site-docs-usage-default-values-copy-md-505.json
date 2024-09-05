@@ -1,0 +1,31 @@
+{
+  "id": "usage/docs-usage-default-values",
+  "title": "Default values",
+  "description": "",
+  "source": "@site/docs/usage/default_values copy.md",
+  "sourceDirName": "usage",
+  "slug": "/usage/default-values",
+  "permalink": "/docs/usage/default-values",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/icastillejogomez/react-native-toast-handler/tree/develop/docs/docs/usage/default_values copy.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "docs-usage-default-values",
+    "title": "Default values",
+    "sidebar_position": 1,
+    "sidebar_label": "Default values",
+    "slug": "/usage/default-values"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Getting started",
+    "permalink": "/docs/getting-started"
+  },
+  "next": {
+    "title": "Default values",
+    "permalink": "/docs/usage/default-values"
+  }
+}

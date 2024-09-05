@@ -19,10 +19,10 @@ Easy to use and fully customizable toasts handler for React Native applications.
   <li>💪 Fully customizable</li>
   <li>🔥 With analytics handlers</li>
   <li>⚡️ Full FPS animations</li>
-  <li>📦 Easy to use</li>
-  <li>💯 Easy to learn</li>
-  <li>🔧 Fully tested</li>
-  <li>🤝 Open source</li>
+  <!-- <li>📦 Easy to use</li> -->
+  <!-- <li>💯 Easy to learn</li> -->
+  <!-- <li>🔧 Fully tested</li> -->
+  <li>🤝 With queue system and TTL to dispatch toasts without worrying</li>
   <li>🤖 Compatible with Expo Go</li>
   <li>🎨 100% unstyled components</li>
 </ul>

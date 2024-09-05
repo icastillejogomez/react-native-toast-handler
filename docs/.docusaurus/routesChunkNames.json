@@ -249,22 +249,18 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/docs-e5f": {
+  "/docs-17c": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docsaba-d7c"
     }
   },
-  "/docs-ed8": {
+  "/docs-d34": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---docs-005-788"
   },
-  "/docs-6db": {
+  "/docs-a9a": {
     "__comp": "__comp---theme-doc-roota-94-67a"
-  },
-  "/docs/about-8c1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-about-280-69d"
   },
   "/docs/analytics/events-c61": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -294,9 +290,13 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-hooks-use-toast-9-c-3-9ee"
   },
-  "/docs/instalation-68b": {
+  "/docs/instalation-b19": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-instalation-5-d-4-a32"
+    "content": "content---docs-instalationf-29-6ce"
+  },
+  "/docs/intro-dbc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-intro-280-778"
   },
   "/docs/reference/toast-provider-a17": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -306,6 +306,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-usage-animating-timeoutf-3-b-dea"
   },
+  "/docs/usage/close-toast-762": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-usage-close-toastf-9-b-50f"
+  },
   "/docs/usage/default-values-df1": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-usage-default-values-7-b-3-e25"
@@ -314,9 +318,9 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-usage-extra-datac-92-232"
   },
-  "/docs/usage/hide-toast-c2c": {
+  "/docs/usage/position-and-entering-536": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-usage-hide-toast-523-18c"
+    "content": "content---docs-usage-position-and-enteringd-60-466"
   },
   "/docs/usage/remove-toast-6e6": {
     "__comp": "__comp---theme-doc-item-178-a40",

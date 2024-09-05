@@ -99,10 +99,6 @@ export default {
             {
               "label": "Github",
               "href": "https://github.com/icastillejogomez/react-native-toast-handler"
-            },
-            {
-              "label": "Twitter",
-              "href": "https://twitter.com/nachoogoomez"
             }
           ]
         }

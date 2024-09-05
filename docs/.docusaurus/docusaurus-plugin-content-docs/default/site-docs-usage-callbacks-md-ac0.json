@@ -1,7 +1,7 @@
 {
   "id": "usage/docs-usage-toast-callbacks",
   "title": "React Native Toast Handler toast callbacks",
-  "description": "onPress",
+  "description": "onShow",
   "source": "@site/docs/usage/callbacks.md",
   "sourceDirName": "usage",
   "slug": "/usage/toast-callbacks",
@@ -11,21 +11,21 @@
   "editUrl": "https://github.com/icastillejogomez/react-native-toast-handler/tree/develop/docs/docs/usage/callbacks.md",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 8,
+  "sidebarPosition": 9,
   "frontMatter": {
     "id": "docs-usage-toast-callbacks",
     "title": "React Native Toast Handler toast callbacks",
-    "sidebar_position": 8,
+    "sidebar_position": 9,
     "sidebar_label": "Toast callbacks",
     "slug": "/usage/toast-callbacks"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Pass extra data to toast",
-    "permalink": "/docs/usage/extra_data"
+    "title": "Remove toasts",
+    "permalink": "/docs/usage/remove-toast"
   },
   "next": {
-    "title": "Animating timeout",
-    "permalink": "/docs/usage/animating_timeout"
+    "title": "Pass extra data to toast",
+    "permalink": "/docs/usage/extra_data"
   }
 }

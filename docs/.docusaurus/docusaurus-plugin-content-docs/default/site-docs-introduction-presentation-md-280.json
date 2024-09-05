@@ -4,8 +4,8 @@
   "description": "What?",
   "source": "@site/docs/introduction/presentation.md",
   "sourceDirName": "introduction",
-  "slug": "/about",
-  "permalink": "/docs/about",
+  "slug": "/intro",
+  "permalink": "/docs/intro",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/icastillejogomez/react-native-toast-handler/tree/develop/docs/docs/introduction/presentation.md",
@@ -17,7 +17,7 @@
     "title": "What is React Native Toast Handler?",
     "sidebar_position": 1,
     "sidebar_label": "Presentation",
-    "slug": "/about"
+    "slug": "/intro"
   },
   "sidebar": "tutorialSidebar",
   "next": {

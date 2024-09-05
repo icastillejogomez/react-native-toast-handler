@@ -114,22 +114,16 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'e5f'),
+    component: ComponentCreator('/docs', '17c'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', 'ed8'),
+        component: ComponentCreator('/docs', 'd34'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', '6db'),
+            component: ComponentCreator('/docs', 'a9a'),
             routes: [
-              {
-                path: '/docs/about',
-                component: ComponentCreator('/docs/about', '8c1'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
               {
                 path: '/docs/analytics/events',
                 component: ComponentCreator('/docs/analytics/events', 'c61'),
@@ -174,7 +168,13 @@ export default [
               },
               {
                 path: '/docs/instalation',
-                component: ComponentCreator('/docs/instalation', '68b'),
+                component: ComponentCreator('/docs/instalation', 'b19'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/intro',
+                component: ComponentCreator('/docs/intro', 'dbc'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -191,6 +191,12 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/docs/usage/close-toast',
+                component: ComponentCreator('/docs/usage/close-toast', '762'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/docs/usage/default-values',
                 component: ComponentCreator('/docs/usage/default-values', 'df1'),
                 exact: true,
@@ -203,8 +209,8 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/usage/hide-toast',
-                component: ComponentCreator('/docs/usage/hide-toast', 'c2c'),
+                path: '/docs/usage/position-and-entering',
+                component: ComponentCreator('/docs/usage/position-and-entering', '536'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

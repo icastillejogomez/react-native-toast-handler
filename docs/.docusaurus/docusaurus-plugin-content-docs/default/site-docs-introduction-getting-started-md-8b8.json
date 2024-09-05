@@ -1,7 +1,7 @@
 {
   "id": "introduction/docs-getting-started",
   "title": "Getting started with React Native Toast Handler",
-  "description": "",
+  "description": "Toast provider - Wraping your application",
   "source": "@site/docs/introduction/getting_started.md",
   "sourceDirName": "introduction",
   "slug": "/getting-started",

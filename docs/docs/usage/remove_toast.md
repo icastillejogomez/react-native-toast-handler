@@ -1,7 +1,7 @@
 ---
 id: docs-usage-remove-toast
 title: Remove toasts in React Native Toast Handler
-sidebar_position: 6
+sidebar_position: 7
 sidebar_label: Remove toasts
 slug: /usage/remove-toast
 ---

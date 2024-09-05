@@ -11,21 +11,21 @@
   "editUrl": "https://github.com/icastillejogomez/react-native-toast-handler/tree/develop/docs/docs/usage/remove_toast.md",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 6,
+  "sidebarPosition": 7,
   "frontMatter": {
     "id": "docs-usage-remove-toast",
     "title": "Remove toasts in React Native Toast Handler",
-    "sidebar_position": 6,
+    "sidebar_position": 7,
     "sidebar_label": "Remove toasts",
     "slug": "/usage/remove-toast"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Hide toasts",
-    "permalink": "/docs/usage/hide-toast"
+    "title": "Close toasts",
+    "permalink": "/docs/usage/close-toast"
   },
   "next": {
-    "title": "Pass extra data to toast",
-    "permalink": "/docs/usage/extra_data"
+    "title": "Toast callbacks",
+    "permalink": "/docs/usage/toast-callbacks"
   }
 }

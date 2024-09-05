@@ -52,7 +52,7 @@
             },
             {
               "id": "introduction/docs-what-is-react-native-toast-handler",
-              "path": "/docs/about",
+              "path": "/docs/intro",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -66,6 +66,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "usage/docs-usage-close-toast",
+              "path": "/docs/usage/close-toast",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "usage/docs-usage-default-values",
               "path": "/docs/usage/default-values",
               "sidebar": "tutorialSidebar"
@@ -76,8 +81,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "usage/docs-usage-hide-toast",
-              "path": "/docs/usage/hide-toast",
+              "id": "usage/docs-usage-position-and-entering",
+              "path": "/docs/usage/position-and-entering",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -110,7 +115,7 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/about",
+                "path": "/docs/intro",
                 "label": "Presentation"
               }
             }

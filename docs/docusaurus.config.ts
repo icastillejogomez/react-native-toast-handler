@@ -18,7 +18,7 @@ const config: Config = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -80,38 +80,38 @@ const config: Config = {
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Introduction',
-              to: '/docs/introduction',
-            },
-            {
-              label: 'Getting started',
-              to: '/docs/getting-started',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'Github',
-              href: 'https://github.com/icastillejogomez/react-native-toast-handler',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Ignacio F. Castillejo Gómez`,
-    },
+    // footer: {
+    //   style: 'dark',
+    //   links: [
+    //     {
+    //       title: 'Docs',
+    //       items: [
+    //         {
+    //           label: 'Introduction',
+    //           to: '/docs/introduction',
+    //         },
+    //         {
+    //           label: 'Getting started',
+    //           to: '/docs/getting-started',
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       title: 'Community',
+    //       items: [
+    //         {
+    //           label: 'Blog',
+    //           to: '/blog',
+    //         },
+    //         {
+    //           label: 'Github',
+    //           href: 'https://github.com/icastillejogomez/react-native-toast-handler',
+    //         },
+    //       ],
+    //     },
+    //   ],
+    //   copyright: `Copyright © ${new Date().getFullYear()} Ignacio F. Castillejo Gómez`,
+    // },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,

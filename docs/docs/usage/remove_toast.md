@@ -7,3 +7,7 @@ slug: /usage/remove-toast
 ---
 
 # Remove toast
+
+## Manually
+
+## Expiration with TTL

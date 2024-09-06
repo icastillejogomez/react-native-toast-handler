@@ -1,38 +1,32 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
+import React from 'react';
 import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import React, { useEffect } from 'react';
-import 'react-native-reanimated';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { ToastProvider } from 'react-native-toast-handler';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+import { DefaultToast, TimeoutToast } from '@/components';
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
+    <GestureHandlerRootView>
+      <ToastProvider
+        defaultBottomOffset={100}
+        defaultTopOffset={120}
+        defaultMarginHorizontal={32}
+        renderToast={(props) => {
+          switch (props.status) {
+            case 'timeout':
+              return <TimeoutToast {...props} />;
+            default:
+              return <DefaultToast {...props} />;
+          }
+        }}
+      >
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="on-tap" options={{ headerTitle: 'Closing on tap', headerBackTitle: 'Back' }} />
+          <Stack.Screen name="timeout" options={{ headerTitle: 'Timeout', headerBackTitle: 'Back' }} />
+        </Stack>
+      </ToastProvider>
+    </GestureHandlerRootView>
   );
 }

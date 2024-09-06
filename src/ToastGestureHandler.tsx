@@ -121,9 +121,9 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
       if (!selectedSwipeDirection) {
         if (position === 'top') {
           translateY.value = withTiming(
-            5 * (-topOffset - toastDimensions.height),
+            3 * (-topOffset - toastDimensions.height),
             {
-              duration: 300,
+              duration: 500,
               easing: Easing.linear,
             },
             () => {
@@ -134,7 +134,7 @@ const ToastGestureHandler = forwardRef<ToastGestureHandlerRef, ToastGestureHandl
           translateY.value = withTiming(
             10 * (bottomOffset + toastDimensions.height),
             {
-              duration: 300,
+              duration: 500,
               easing: Easing.linear,
             },
             () => {
@@ -303,15 +303,11 @@ ToastGestureHandler.displayName = 'ToastGestureHandler';
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    display: 'flex',
     alignSelf: 'center',
     alignItems: 'center',
     zIndex: 999,
   },
-  wrapper: {
-    flex: 1,
-    alignItems: 'center',
-  },
+  wrapper: {},
 });
 
 export { ToastGestureHandler };

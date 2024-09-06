@@ -25,6 +25,7 @@ export default function RootLayout() {
           <Stack.Screen name="index" options={{ headerShown: false }} />
           <Stack.Screen name="on-tap" options={{ headerTitle: 'Closing on tap', headerBackTitle: 'Back' }} />
           <Stack.Screen name="timeout" options={{ headerTitle: 'Timeout', headerBackTitle: 'Back' }} />
+          <Stack.Screen name="swipe" options={{ headerTitle: 'Swipe to close', headerBackTitle: 'Back' }} />
         </Stack>
       </ToastProvider>
     </GestureHandlerRootView>

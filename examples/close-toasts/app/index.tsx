@@ -11,11 +11,8 @@ const IndexScreen = () => {
       <Link href="/timeout" style={styles.text}>
         With timeout
       </Link>
-      <Link href="/on-tap" style={styles.text}>
+      <Link href="/swipe" style={styles.text}>
         Swiping it
-      </Link>
-      <Link href="/on-tap" style={styles.text}>
-        Manually
       </Link>
     </View>
   );

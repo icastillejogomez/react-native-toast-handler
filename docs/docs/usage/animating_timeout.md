@@ -59,3 +59,6 @@ const styles = StyleSheet.create({...});
 export { TimeoutToast };
 ```
 
+:::info
+Even if the toast is handle by a timeout based on the `duration` property, the user can still close the toast by tapping on it or swiping it if this options are enabled.
+:::

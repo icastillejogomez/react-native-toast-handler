@@ -117,9 +117,9 @@ const handlePress = useCallback(() => {
   showToast({
     message: 'Hello world',
     status: 'info',
-    onClose: () => {
+    onClose: (method) => {
       // highlight-next-line
-      console.log('Toast is closed');
+      console.log('Toast is closed: ' + method);
     },
   });
 }, [showToast])

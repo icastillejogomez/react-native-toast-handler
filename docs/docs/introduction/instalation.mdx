@@ -1,0 +1,143 @@
+---
+id: docs-instalation
+title: Instalation of React Native Toast Handler
+sidebar_position: 2
+sidebar_label: Instalation
+slug: /instalation
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Instalation
+
+In order to use this library you will need to install two important libraries which are [React Native Gesture Handler](https://github.com/software-mansion/react-native-gesture-handler) and [Reanimated](https://github.com/software-mansion/react-native-reanimated). React Native Toast Handler was developed over this two libraries but it is necessary to install them in your project. Follow the next instructions to prepare your enviroment to use React Native Toast Handler.
+
+## Install React Native Gesture Handler
+
+This library use under the hood the [React Native Gesture Handler](https://github.com/software-mansion/react-native-gesture-handler) library to handle the gestures. So you need to install it in your project:
+
+<Tabs>
+<TabItem value="expo" label="Expo" default>
+
+```bash
+npx expo install react-native-gesture-handler
+```
+
+</TabItem>
+<TabItem value="npm" label="npm">
+
+```bash
+npm install react-native-gesture-handler --save
+```
+
+</TabItem>
+<TabItem value="yarn" label="yarn">
+
+```bash
+yarn add react-native-gesture-handler
+```
+
+</TabItem>
+</Tabs>
+
+:::warning
+At this moment, we didn't check the compatibility between this library and the React Native Gesture Handler v2 and v1 versions. This library was develop with the version v3. If you have any problem with those versions, please open an issue in the [repository](https://github.com/icastillejogomez/react-native-toast-handler).
+:::
+
+## Install Reanimated
+
+This library use under the hood the [Reanimated](https://github.com/software-mansion/react-native-reanimated) library to animate the toasts. So you need to install it in your project:
+
+<Tabs>
+<TabItem value="expo" label="Expo" default>
+
+```bash
+npx expo install react-native-reanimated
+```
+
+</TabItem>
+<TabItem value="npm" label="npm">
+
+```bash
+npm install react-native-reanimated --save
+```
+
+</TabItem>
+<TabItem value="yarn" label="yarn">
+
+```bash
+yarn add react-native-reanimated
+```
+
+</TabItem>
+</Tabs>
+
+:::warning
+At this moment, we didn't check the compatibility between this library and the Reanimated v2 and v1 versions. This library was develop with the version v3. If you have any problem with those versions, please open an issue in the [repository](https://github.com/icastillejogomez/react-native-toast-handler).
+:::
+
+### Wrap your application with GestureHandlerRootView
+
+In the [Getting Started](/docs/gettings-started) page, we are going to see that is necessary wrap the ToastProvider with a GestureHandlerRootView component. This component will handle the gestures in order to handle the swipes movements.
+
+```jsx
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
+export default function App() {
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      {/* content */}
+    </GestureHandlerRootView>
+  );
+}
+```
+
+:::info[Learn more about React Native Gesture Handler instalation]
+You can learn more about the instalation of React Native Gesture Handler in the [React Native Gesture Handler documentation](https://docs.swmansion.com/react-native-gesture-handler/docs/fundamentals/installation).
+:::
+
+### Reanimated babel preset
+In case you are using Expo, you don't need to add the babel preset as they [say in their documentation].(https://docs.expo.dev/versions/latest/sdk/reanimated/). But in case you are using a different framework or React Native CLI, you need to add the Reanimated babel preset to your `babel.config.js` file:
+
+```js
+module.exports = {
+  plugins: [
+    // ...
+    // highlight-next-line
+    'react-native-reanimated/plugin',
+  ],
+};
+```
+
+Any ways, we encourage you to reed the [Reanimated instalation guide](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started) to learn more about it.
+
+## Install React Native Toast Handler
+
+
+<Tabs>
+<TabItem value="expo" label="Expo" default>
+
+```bash
+npx expo install react-native-toast-handler
+```
+
+</TabItem>
+<TabItem value="npm" label="npm">
+
+```bash
+npm install react-native-toast-handler --save
+```
+
+</TabItem>
+<TabItem value="yarn" label="yarn">
+
+```bash
+yarn add react-native-toast-handler
+```
+
+</TabItem>
+</Tabs>
+
+🚀 And that's it! You can now use the library in your project.
